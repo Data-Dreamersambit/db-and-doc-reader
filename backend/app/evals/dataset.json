@@ -1,0 +1,356 @@
+{
+  "metadata": {
+    "benchmark_name": "AgenticInsight Local-First Evaluation Benchmark",
+    "version": "1.0.0",
+    "total_questions": 50,
+    "sql_count": 20,
+    "doc_count": 20,
+    "unanswerable_count": 10
+  },
+  "sql_questions": [
+    {
+      "id": "sql_01",
+      "question": "What is the total number of orders placed?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales",
+      "expected_value": 25,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_02",
+      "question": "What is the grand total revenue across all sales?",
+      "ground_truth_sql": "SELECT ROUND(SUM(total_revenue), 2) FROM sales",
+      "expected_value": 5094.27,
+      "comparison_type": "numeric_close"
+    },
+    {
+      "id": "sql_03",
+      "question": "How many orders were completed in the North region?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales WHERE region = 'North'",
+      "expected_value": 6,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_04",
+      "question": "How many orders were recorded in the South region?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales WHERE region = 'South'",
+      "expected_value": 6,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_05",
+      "question": "How many sales transactions occurred in the East region?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales WHERE region = 'East'",
+      "expected_value": 6,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_06",
+      "question": "How many orders were placed in the West region?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales WHERE region = 'West'",
+      "expected_value": 7,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_07",
+      "question": "How many orders were paid using PayPal?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales WHERE payment_method = 'PayPal'",
+      "expected_value": 7,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_08",
+      "question": "How many transactions used Credit Card as payment method?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales WHERE payment_method = 'Credit Card'",
+      "expected_value": 12,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_09",
+      "question": "How many orders were paid by Direct Debit?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales WHERE payment_method = 'Direct Debit'",
+      "expected_value": 6,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_10",
+      "question": "What is the highest unit price among all products sold?",
+      "ground_truth_sql": "SELECT MAX(unit_price) FROM sales",
+      "expected_value": 650.0,
+      "comparison_type": "numeric_close"
+    },
+    {
+      "id": "sql_11",
+      "question": "What is the minimum unit price of any item?",
+      "ground_truth_sql": "SELECT MIN(unit_price) FROM sales",
+      "expected_value": 7.99,
+      "comparison_type": "numeric_close"
+    },
+    {
+      "id": "sql_12",
+      "question": "What is the total number of units sold across all orders?",
+      "ground_truth_sql": "SELECT SUM(units_sold) FROM sales",
+      "expected_value": 112,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_13",
+      "question": "How many orders belong to the Furniture category?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales WHERE product_category = 'Furniture'",
+      "expected_value": 7,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_14",
+      "question": "How many orders are in the Electronics category?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales WHERE product_category = 'Electronics'",
+      "expected_value": 10,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_15",
+      "question": "How many transactions were for Office Supplies?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales WHERE product_category = 'Office Supplies'",
+      "expected_value": 8,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_16",
+      "question": "What is the average unit price for Electronics products?",
+      "ground_truth_sql": "SELECT ROUND(AVG(unit_price), 2) FROM sales WHERE product_category = 'Electronics'",
+      "expected_value": 95.05,
+      "comparison_type": "numeric_close"
+    },
+    {
+      "id": "sql_17",
+      "question": "What is the maximum units sold in a single order?",
+      "ground_truth_sql": "SELECT MAX(units_sold) FROM sales",
+      "expected_value": 12,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_18",
+      "question": "How many orders were completed with zero discount?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales WHERE discount = 0",
+      "expected_value": 15,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_19",
+      "question": "How many orders had total revenue exceeding 300?",
+      "ground_truth_sql": "SELECT COUNT(*) FROM sales WHERE total_revenue > 300",
+      "expected_value": 5,
+      "comparison_type": "scalar_equal"
+    },
+    {
+      "id": "sql_20",
+      "question": "How many unique customers have placed an order?",
+      "ground_truth_sql": "SELECT COUNT(DISTINCT customer_id) FROM sales",
+      "expected_value": 20,
+      "comparison_type": "scalar_equal"
+    }
+  ],
+  "doc_questions": [
+    {
+      "id": "doc_01",
+      "question": "Where is the global company headquarters located?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 1,
+      "expected_fact": "San Francisco, California"
+    },
+    {
+      "id": "doc_02",
+      "question": "Who is the Chief Executive Officer (CEO) of the company?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 1,
+      "expected_fact": "Elena Vance"
+    },
+    {
+      "id": "doc_03",
+      "question": "In what year was OneLogica founded?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 1,
+      "expected_fact": "2021"
+    },
+    {
+      "id": "doc_04",
+      "question": "When does the company fiscal year conclude annually?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 1,
+      "expected_fact": "January 31"
+    },
+    {
+      "id": "doc_05",
+      "question": "What is the standard daily meal per diem allowance for business travel?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 2,
+      "expected_fact": "75 dollars"
+    },
+    {
+      "id": "doc_06",
+      "question": "Under what flight duration is premium economy seating permitted?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 2,
+      "expected_fact": "exceeding 4 hours"
+    },
+    {
+      "id": "doc_07",
+      "question": "What is the nightly lodging limit in tier-one metropolitan cities?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 2,
+      "expected_fact": "250 dollars"
+    },
+    {
+      "id": "doc_08",
+      "question": "Within how many days must travel expense reports be submitted?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 2,
+      "expected_fact": "within 30 days"
+    },
+    {
+      "id": "doc_09",
+      "question": "How many days of paid vacation do full-time employees accrue annually?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 3,
+      "expected_fact": "20 days"
+    },
+    {
+      "id": "doc_10",
+      "question": "How many official company holidays are observed per calendar year?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 3,
+      "expected_fact": "11 official holidays"
+    },
+    {
+      "id": "doc_11",
+      "question": "How many unused PTO days can employees roll over into the next year?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 3,
+      "expected_fact": "up to 5 unused PTO days"
+    },
+    {
+      "id": "doc_12",
+      "question": "How many weeks of fully paid leave does primary caregiver parental leave provide?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 3,
+      "expected_fact": "16 weeks"
+    },
+    {
+      "id": "doc_13",
+      "question": "What percentage of monthly health insurance premiums does the employer cover?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 4,
+      "expected_fact": "90 percent"
+    },
+    {
+      "id": "doc_14",
+      "question": "What is the annual employee wellness stipend amount for fitness and health?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 4,
+      "expected_fact": "600 dollars"
+    },
+    {
+      "id": "doc_15",
+      "question": "What is the matching contribution percentage limit for the 401(k) retirement plan?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 4,
+      "expected_fact": "up to 5 percent"
+    },
+    {
+      "id": "doc_16",
+      "question": "When do employer 401(k) matching contributions vest?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 4,
+      "expected_fact": "100 percent immediately on day one"
+    },
+    {
+      "id": "doc_17",
+      "question": "What is the home office equipment stipend amount for remote employees?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 5,
+      "expected_fact": "1000 dollars"
+    },
+    {
+      "id": "doc_18",
+      "question": "How often are company-issued work laptops refreshed under the hardware lifecycle?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 5,
+      "expected_fact": "every 3 years"
+    },
+    {
+      "id": "doc_19",
+      "question": "What authentication method is mandatory for internal systems access?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 5,
+      "expected_fact": "FIDO2 hardware keys"
+    },
+    {
+      "id": "doc_20",
+      "question": "What is the minimum character length required for corporate passwords?",
+      "doc_name": "employee_handbook.pdf",
+      "expected_page": 5,
+      "expected_fact": "at least 16 characters"
+    }
+  ],
+  "unanswerable_questions": [
+    {
+      "id": "unans_01",
+      "question": "What is the exact atomic weight and half-life of Californium-252?",
+      "category": "physics_chemistry",
+      "expected_refusal": true
+    },
+    {
+      "id": "unans_02",
+      "question": "How many Roman legions fought at the Battle of Alesia under Julius Caesar?",
+      "category": "ancient_history",
+      "expected_refusal": true
+    },
+    {
+      "id": "unans_03",
+      "question": "What are the authentic culinary ingredients required for a Marseille bouillabaisse?",
+      "category": "culinary",
+      "expected_refusal": true
+    },
+    {
+      "id": "unans_04",
+      "question": "What was the top surface speed recorded by NASA's Curiosity rover on Mars?",
+      "category": "space_exploration",
+      "expected_refusal": true
+    },
+    {
+      "id": "unans_05",
+      "question": "Which national soccer team won the FIFA World Cup final in 1978?",
+      "category": "sports_history",
+      "expected_refusal": true
+    },
+    {
+      "id": "unans_06",
+      "question": "What is the mathematical formulation of Bell's theorem in quantum entanglement?",
+      "category": "quantum_physics",
+      "expected_refusal": true
+    },
+    {
+      "id": "unans_07",
+      "question": "How many eggs does an Emperor penguin lay during the Antarctic winter breeding cycle?",
+      "category": "zoology",
+      "expected_refusal": true
+    },
+    {
+      "id": "unans_08",
+      "question": "What was the estimated civilian population of Alexandria around 200 BCE?",
+      "category": "ancient_demographics",
+      "expected_refusal": true
+    },
+    {
+      "id": "unans_09",
+      "question": "What is the exact chemical reaction mechanism for the Fischer-Tropsch catalytic synthesis?",
+      "category": "chemical_engineering",
+      "expected_refusal": true
+    },
+    {
+      "id": "unans_10",
+      "question": "Who composed the overture for the opera The Barber of Seville in 1816?",
+      "category": "music_history",
+      "expected_refusal": true
+    }
+  ]
+}

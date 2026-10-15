@@ -1,0 +1,26 @@
+order_id,order_date,customer_id,region,product_category,product_name,units_sold,unit_price,discount,total_revenue,payment_method
+1001,2024-01-05,CUST-001,North,Electronics,Wireless Mouse,5,25.50,0.00,127.50,Credit Card
+1002,2024-01-08,CUST-002,South,Furniture,Ergonomic Chair,2,250.00,0.10,450.00,PayPal
+1003,2024-01-12,CUST-003,East,Office Supplies,Gel Pens (12pk),10,12.00,0.00,120.00,Credit Card
+1004,2024-01-15,CUST-004,West,Electronics,Mechanical Keyboard,3,89.99,0.05,256.47,Direct Debit
+1005,2024-01-20,CUST-005,North,Furniture,Standing Desk,1,450.00,0.15,382.50,Credit Card
+1006,2024-01-22,CUST-001,North,Office Supplies,Copy Paper (Ream),8,8.50,0.00,68.00,Credit Card
+1007,2024-02-01,CUST-006,South,Electronics,27in 4K Monitor,2,320.00,0.10,576.00,PayPal
+1008,2024-02-03,CUST-007,West,Furniture,Desk Lamp LED,4,35.00,0.00,140.00,Direct Debit
+1009,2024-02-10,CUST-008,East,Office Supplies,Notebook Spiral (3pk),12,9.99,0.00,119.88,Credit Card
+1010,2024-02-14,CUST-009,North,Electronics,USB-C Hub Multiport,6,45.00,0.05,256.50,PayPal
+1011,2024-02-18,CUST-010,South,Office Supplies,Stapler Heavy Duty,3,18.00,0.00,54.00,Credit Card
+1012,2024-02-25,CUST-002,South,Electronics,Noise-Canceling Headset,2,150.00,0.10,270.00,PayPal
+1013,2024-03-02,CUST-011,West,Furniture,Bookshelf 5-Tier,1,180.00,0.00,180.00,Direct Debit
+1014,2024-03-05,CUST-012,East,Electronics,Webcam 1080p,4,65.00,0.05,247.00,Credit Card
+1015,2024-03-10,CUST-013,North,Office Supplies,Whiteboard Markers (8pk),7,11.50,0.00,80.50,Direct Debit
+1016,2024-03-15,CUST-014,South,Furniture,Office Footrest,5,28.00,0.00,140.00,PayPal
+1017,2024-03-18,CUST-015,West,Electronics,Bluetooth Speaker,3,75.00,0.10,202.50,Credit Card
+1018,2024-03-22,CUST-004,West,Office Supplies,Filing Folders (25pk),5,14.50,0.00,72.50,Direct Debit
+1019,2024-03-28,CUST-016,East,Furniture,Executive Office Desk,1,650.00,0.20,520.00,Credit Card
+1020,2024-04-02,CUST-017,North,Electronics,External SSD 1TB,3,110.00,0.00,330.00,PayPal
+1021,2024-04-06,CUST-018,South,Office Supplies,Desk Organizer Mesh,6,16.50,0.00,99.00,Credit Card
+1022,2024-04-12,CUST-019,East,Electronics,Laser Pointer Presenter,2,30.00,0.00,60.00,Direct Debit
+1023,2024-04-18,CUST-020,West,Furniture,Under-desk Cable Tray,4,22.00,0.00,88.00,PayPal
+1024,2024-04-22,CUST-007,West,Office Supplies,Heavy Duty Scissors,8,7.99,0.00,63.92,Credit Card
+1025,2024-04-28,CUST-003,East,Electronics,Portable Power Bank,5,40.00,0.05,190.00,Credit Card

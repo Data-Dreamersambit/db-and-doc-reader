@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+data/
+*.duckdb
+*.sqlite
+.env
+node_modules/
+dist/
+.DS_Store
